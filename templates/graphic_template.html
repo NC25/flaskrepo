@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/static/stylesheets/newstyle.css" rel="stylesheet", type="text/css" />
+
+</head>
+
+<body style="background-color: rgb(108, 108, 108);">
+    <!-- <select name="menu" method="GET" action="/">
+        <option value="{{tendencyList [0]}}" selected>{{tendencyList [0]}}</option>
+        {% for t in tendencyList[1:] %}
+          <option value="{{tendencyList}}">{{tendencyList}}</option>
+        {% endfor %}
+      </select> -->
+
+    
+    <div class="button-headers">
+    <form>
+        <input type="button"  class="back-button" value="Select Another Player" onclick="history.back()">
+       </form>
+   <button class="save-image" onClick="saveImage()"> Save as Image</button>
+</div>
+    <div id=report_bg>
+        <div id="texture"> 
+            <img class="diagonal" src="/static/img/diagonal-texture.png" alt="">
+        </div>
+        
+        <div id = title-container><p id="title">OFFENSIVE TENDENCIES </p></div>
+        <div id = player_card style="background-image: url({}); background-size: cover;">
+           <div id= player_name_container> <p id="player_name">{}</p></div>
+
+           <div id= player_role_container> <p id="player_role">{}</p></div>
+           
+           <div id= player_usg></div>
+
+        </div>
+
+        <div id = subtitle-container><p id="subtitle">[IN ALL LINEUPS  |  2021-22]</p></div>
+
+        <div id = bars_container>
+
+
+            <div class="row">
+                <p class="left-label">On-Ball<br> Usage</p>
+                <div class="bar">
+                    <div class="left-bar" style="width: {}%;"> <p class="left-num">{}</p></div>
+                    <div class="middle-bar"></div>
+                    <div class="right-bar" style="width: {}%;">  <p class="right-num">{}</p></div>
+                </div>
+                <p class="right-label">Off-Ball <br> Usage</p>
+            </div>
+
+            <div class="row">
+                <p class="left-label">Score <br> Attempt</p>
+                <div class="bar">
+                    <div class="left-bar" style="width: {}%;"> <p class="left-num">{}</p></div>
+                    <div class="middle-bar"></div>
+                    <div class="right-bar" style="width: {}%;">  <p class="right-num">{}</p></div>
+                </div>
+                <p class="right-label">Pass <br> Out</p>
+            </div>
+
+            <div class="row">
+                <p class="left-label">Finish <br> at Rim</p>
+                <div class="bar">
+                    <div class="left-bar" style="width: {}%;"> <p class="left-num">{}</p></div>
+                    <div class="middle-bar"></div>
+                    <div class="right-bar" style="width: {}%;">  <p class="right-num">{}</p></div>
+                </div>
+                <p class="right-label">Settle for<br> Floater</p>
+            </div>
+
+            <div class="row">
+                <p class="left-label">2PT <br> AST</p>
+                <div class="bar">
+                    <div class="left-bar" style="width: {}%;"> <p class="left-num">{}</p></div>
+                    <div class="middle-bar"></div>
+                    <div class="right-bar" style="width: {}%;">  <p class="right-num">{}</p></div>
+                </div>
+                <p class="right-label">3PT <br> AST</p>
+            </div>
+
+            <div class="row">
+                <p class="left-label">Drive <br> Off Catch</p>
+                <div class="bar">
+                    <div class="left-bar" style="width: {}%;"> <p class="left-num">{}</p></div>
+                    <div class="middle-bar"></div>
+                    <div class="right-bar" style="width: {}%;">  <p class="right-num">{}</p></div>
+                </div>
+                <p class="right-label">Shoot <br> Off Catch</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content" id='modal-content'>
+
+            <span class="close" id = "close" onclick="removeImage()">&times;</span>
+                </div>
+
+    </div>
+
+        
+    <script>
+        var modal = document.getElementById("myModal");
+        window.onclick = function (event) {{
+            if (event.target == modal) {{
+                removeImage();
+            }}
+        }}
+        </script>
+    <script src="static/javascript/html2canvas.min.js"></script>
+    <script src="static/javascript/javascript.js"></script>
+
+
+    
+</body>
+
+</html>
